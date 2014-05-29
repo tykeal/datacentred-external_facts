@@ -12,7 +12,7 @@ datacentred-external_facts
 ## Overview
 
 The external facts module is a simple wrapper around Facter 1.7+ support
-for extenal facts.
+for external facts.
 
 ## Module Description
 
@@ -28,7 +28,7 @@ automatically purged and will become absent in subsequent puppet runs.
 
 Hosts must declare the directory management portion of the module
 
-    import ::external_facts
+    include ::external_facts
 
 #### Creating facts
 
