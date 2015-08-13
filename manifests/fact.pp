@@ -20,15 +20,15 @@
 define external_facts::fact (
   $value = true,
 ) {
-  include external_facts::params
+  include external_facts
 
-  file { "${facter_basedir}/${title}.txt":
+  file { "fact ${title}":
     ensure  => file,
+    path    => "${external_facts::facts_dir}/${title}.txt",
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
     content => "${title}=${value}",
     require => Class['external_facts'],
   }
-
 }

@@ -11,9 +11,9 @@
 # Copyright 2015 Andrew J Grimberg
 #
 class external_facts::params {
-  if ($::is_pe or versioncmp($::puppetversion, '4.0.0') >= 0 {
+  if ($::is_pe or versioncmp($::puppetversion, '4.0.0') >= 0) {
     # PE and Puppet4+ use the same paths
-    $facter_basedir = "${::settings::environmentpath}/facter"
+    $facter_basedir = '/etc/puppetlabs/facter'
   }
   else {
     # All pre Puppet4+ FOSS distributions

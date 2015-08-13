@@ -16,12 +16,13 @@ class external_facts inherits external_facts::params {
     mode   => '0755',
   }
 
-  file { $external_facts::params::facter_basedir:
+  file { 'facter basedir':
+    path =>  $external_facts::params::facter_basedir,
   } ->
 
-  file { $external_facts::params::facts_dir:
+  file { 'facts dir':
+    path    => $external_facts::params::facts_dir,
     recurse => true,
     purge   => true,
   }
-
 }
