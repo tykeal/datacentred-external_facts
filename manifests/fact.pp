@@ -20,8 +20,9 @@
 define external_facts::fact (
   $value = true,
 ) {
+  include external_facts::params
 
-  file { "/etc/facter/facts.d/${title}.txt":
+  file { "${facter_basedir}/${title}.txt":
     ensure  => file,
     owner   => 'root',
     group   => 'root',
