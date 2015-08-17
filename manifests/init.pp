@@ -7,7 +7,7 @@
 #
 # include ::external_facts
 #
-class external_facts {
+class external_facts inherits external_facts::params {
 
   File {
     ensure => directory,
@@ -16,12 +16,13 @@ class external_facts {
     mode   => '0755',
   }
 
-  file { '/etc/facter':
+  file { 'facter basedir':
+    path =>  $external_facts::params::facter_basedir,
   } ->
 
-  file { '/etc/facter/facts.d':
+  file { 'facts dir':
+    path    => $external_facts::params::facts_dir,
     recurse => true,
     purge   => true,
   }
-
 }

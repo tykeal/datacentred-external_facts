@@ -26,9 +26,13 @@ automatically purged and will become absent in subsequent puppet runs.
 
 #### Enabling Support
 
-Hosts must declare the directory management portion of the module
+Hosts must declare the directory management portion of the module if
+they want non-existant facts to be purged and no facts are being pushed.
 
     include ::external_facts
+
+NOTE: As long as there is at least one fact being created auto-purging
+of other non-manged facts will occur even if the base class is not included
 
 #### Creating facts
 
@@ -45,10 +49,5 @@ or may be declared with an explicit value for use elsewhere
 ## Limitations
 
 This module should work on all GNU Linux systems, but has only been tested
-on Ubuntu.
+on Ubuntu and RedHat.
 
-Puppet Enterprise deployments are not supported at present.
-
-## Testing
-
-There is no unit testing provided.
