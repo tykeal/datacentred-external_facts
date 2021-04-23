@@ -1,5 +1,4 @@
-datacentred-external_facts
-==========================
+# datacentred-external_facts
 
 #### Table of Contents
 
@@ -16,23 +15,23 @@ for external facts.
 
 ## Module Description
 
-The external facts module installs supporting directory structures and
-creates external facts on demand.  These are defined on your hosts by
-puppet DSL and on subsequent runs are sent to the master for use in
-manifest compilation.  If the fact definition is removed the fact is
-automatically purged and will become absent in subsequent puppet runs.
+The external facts module installs supporting directory structures and creates
+external facts on demand. These are defined on your hosts by puppet DSL and on
+subsequent runs are sent to the master for use in manifest compilation. If the
+fact definition is removed the fact is automatically purged and will become
+absent in subsequent puppet runs.
 
 ## Usage
 
 #### Enabling Support
 
-Hosts must declare the directory management portion of the module if
-they want non-existant facts to be purged and no facts are being pushed.
+Hosts must declare the directory management portion of the module if they want
+non-existant facts to be purged and no facts are being pushed.
 
     include ::external_facts
 
-NOTE: As long as there is at least one fact being created auto-purging
-of other non-manged facts will occur even if the base class is not included
+NOTE: As long as there is at least one fact being created auto-purging of other
+non-manged facts will occur even if the base class is not included
 
 #### Creating facts
 
@@ -48,6 +47,5 @@ or may be declared with an explicit value for use elsewhere
 
 ## Limitations
 
-This module should work on all GNU Linux systems, but has only been tested
-on Ubuntu and RedHat.
-
+This module should work on all GNU Linux systems, but has only been tested on
+Ubuntu and RedHat.
