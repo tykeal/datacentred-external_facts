@@ -18,9 +18,9 @@ class external_facts inherits external_facts::params {
 
   file { 'facter basedir':
     path =>  $external_facts::params::facter_basedir,
-  } ->
+  }
 
-  file { 'facts dir':
+  -> file { 'facts dir':
     path    => $external_facts::params::facts_dir,
     recurse => true,
     purge   => true,
