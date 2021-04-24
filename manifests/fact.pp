@@ -18,7 +18,7 @@
 # }
 #
 define external_facts::fact (
-  $value = true,
+  Variant[Boolean, String] $value = true,
 ) {
   include external_facts
 

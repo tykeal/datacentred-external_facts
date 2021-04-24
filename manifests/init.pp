@@ -7,7 +7,6 @@
 #
 # include ::external_facts
 #
-#class external_facts inherits external_facts::params {
 class external_facts (
   Stdlib::Absolutepath $facter_basedir,
   Stdlib::Absolutepath $facts_dir,
