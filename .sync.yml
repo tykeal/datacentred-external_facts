@@ -1,0 +1,31 @@
+# This file can be used to customize the files managed by PDK.
+#
+# See https://github.com/puppetlabs/pdk-templates/blob/main/README.md
+# for more information.
+#
+# See https://github.com/puppetlabs/pdk-templates/blob/main/config_defaults.yml
+# for the default values.
+---
+# Delete CI system configs we aren't going to use
+appveyor.yml:
+  delete: true
+.travis.yml:
+  delete: true
+.gitlab-ci.yml:
+  delete: true
+
+# modify ignores
+.pdkignore:
+  paths:
+    - .ruby-gemset
+    - .ruby-version
+
+.gitignore:
+  paths:
+    - .ruby-gemset
+    - .ruby-version
+
+# Spec config
+spec/spec_helper.rb:
+  coverage_report: true
+  hiera_config: hiera.yaml

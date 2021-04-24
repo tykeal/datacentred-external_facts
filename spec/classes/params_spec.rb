@@ -2,14 +2,14 @@ require 'spec_helper'
 describe 'external_facts::params' do
   # Testing this class doesn't matter if it's PE or not since we can't
   # inspect variables just manifest
-  let(:facts) {
+  let(:facts) do
     {
-      :is_pe => true
+      is_pe: true
     }
-  }
+  end
 
   context 'with defaults for all parameters' do
-    it { should contain_class('external_facts::params') }
+    it { is_expected.to contain_class('external_facts::params') }
   end
 end
 
