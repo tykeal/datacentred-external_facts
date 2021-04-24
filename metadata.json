@@ -32,10 +32,6 @@
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": ["18.04"]
-    },
-    {
-      "operatingsystem": "windows",
-      "operatingsystemrelease": ["2019", "10"]
     }
   ],
   "requirements": [
@@ -45,7 +41,7 @@
     }
   ],
   "description": "Creates the environment necessary for external facts, then allows creation of new custom facts within manifests",
-  "pdk-version": "2.0.0",
-  "template-url": "pdk-default#2.0.0",
-  "template-ref": "tags/2.0.0-0-ge838f1d"
+  "pdk-version": "2.1.0",
+  "template-url": "pdk-default#2.1.0",
+  "template-ref": "tags/2.1.0-0-ga675ea5"
 }

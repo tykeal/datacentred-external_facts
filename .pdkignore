@@ -42,5 +42,6 @@
 /spec/
 /.vscode/
 /.sync.yml
+/.devcontainer/
 .ruby-gemset
 .ruby-version
