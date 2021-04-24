@@ -1,2 +1,3 @@
 ---
-{}
+external_facts::facter_basedir: /etc/puppetlabs/facter
+external_facts::facts_dir: "%{lookup('external_facts::facter_basedir')}/facts.d"

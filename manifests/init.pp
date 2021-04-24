@@ -7,7 +7,11 @@
 #
 # include ::external_facts
 #
-class external_facts inherits external_facts::params {
+#class external_facts inherits external_facts::params {
+class external_facts (
+  Stdlib::Absolutepath $facter_basedir,
+  Stdlib::Absolutepath $facts_dir,
+) {
 
   File {
     ensure => directory,
@@ -17,11 +21,11 @@ class external_facts inherits external_facts::params {
   }
 
   file { 'facter basedir':
-    path =>  $external_facts::params::facter_basedir,
+    path =>  $facter_basedir,
   }
 
   -> file { 'facts dir':
-    path    => $external_facts::params::facts_dir,
+    path    => $facts_dir,
     recurse => true,
     purge   => true,
   }
