@@ -12,5 +12,3 @@ describe 'external_facts::params' do
     it { is_expected.to contain_class('external_facts::params') }
   end
 end
-
-# vim: ts=2 sw=2 sts=2 et :
