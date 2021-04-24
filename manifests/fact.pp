@@ -1,21 +1,15 @@
-# == Define: external_facts::fact
+# @summary Set external facts
 #
 # Defines an external fact which will be available for use in your manifests
 # next puppet run
 #
-# === Parameters
+# @param value
+#   The value of the fact being set (default: true)
 #
-# [*title*]
-#   The name the fact will be available as at a global scope
-#
-# [*value*]
-#   The value of the fact
-#
-# === Examples
-#
-# external_facts::fact { 'servicegroups':
-#   value => 'http,https',
-# }
+# @example
+#   external_facts::fact { 'servicegroups':
+#     value => 'http,https',
+#   }
 #
 define external_facts::fact (
   Variant[Boolean, String] $value = true,
