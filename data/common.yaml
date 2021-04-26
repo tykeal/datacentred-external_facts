@@ -1,2 +1,12 @@
 ---
-{}
+lookup_options:
+  external_facts::external_facts:
+    merge: hash
+  external_facts::scripts:
+    merge: hash
+
+external_facts::facter_basedir: /etc/puppetlabs/facter
+external_facts::facts_dir: "%{lookup('external_facts::facter_basedir')}/facts.d"
+
+external_facts::external_facts: {}
+external_facts::scripts: {}
