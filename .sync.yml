@@ -14,6 +14,13 @@ appveyor.yml:
 .gitlab-ci.yml:
   delete: true
 
+# Disable the following as it causes problems in GitHub Actions
+# modify Gemfile
+#Gemfile:
+#  optional:
+#    ":development":
+#      - gem: github_changelog_generator
+
 # modify ignores
 .pdkignore:
   paths:
