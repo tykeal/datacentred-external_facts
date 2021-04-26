@@ -50,6 +50,35 @@ describe 'external_facts' do
           )
         }
       end
+
+      context 'with scripts set' do
+        let(:params) do
+          {
+            scripts: {
+              'content-facts.sh': {
+                content: 'foo',
+              },
+              'source-facts.sh': {
+                source: 'file:///foo-facts.sh',
+              },
+            }
+          }
+        end
+
+        it { is_expected.to contain_external_facts__script('content-facts.sh') }
+        it {
+          is_expected.to contain_file('/etc/puppetlabs/facter/facts.d/content-facts.sh').with(
+            'content' => 'foo',
+          )
+        }
+
+        it { is_expected.to contain_external_facts__script('source-facts.sh') }
+        it {
+          is_expected.to contain_file('/etc/puppetlabs/facter/facts.d/source-facts.sh').with(
+            'source' => 'file:///foo-facts.sh',
+          )
+        }
+      end
     end
   end
 end

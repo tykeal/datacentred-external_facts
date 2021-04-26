@@ -18,6 +18,10 @@
 #   A hash merged hash of facts to set as either boolean, or strings
 #   (default: {})
 #
+# @param scripts
+#   A hash merged hash of scripts to push out
+#   (default: {})
+#
 # @example
 #   include ::external_facts
 #
@@ -25,6 +29,10 @@ class external_facts (
   Stdlib::Absolutepath $facter_basedir,
   Stdlib::Absolutepath $facts_dir,
   Hash[String, Struct[{value => Variant[Boolean, String]}]] $external_facts,
+  Hash[String, Struct[{
+    content => Optional[String],
+    source  => Optional[Stdlib::Filesource],
+  }]] $scripts,
 ) {
 
   File {
@@ -46,5 +54,9 @@ class external_facts (
 
   $external_facts.each |String $resource, Hash $options| {
     external_facts::fact { $resource: * => $options }
+  }
+
+  $scripts.each |String $resource, Hash $options| {
+    external_facts::script { $resource: * => $options }
   }
 }
