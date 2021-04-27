@@ -1,6 +1,6 @@
 {
   "name": "tykeal-external_facts",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "tykeal",
   "summary": "Module to manage external facts",
   "license": "Apache-2.0",
@@ -16,15 +16,15 @@
   "operatingsystem_support": [
     {
       "operatingsystem": "CentOS",
-      "operatingsystemrelease": ["7"]
+      "operatingsystemrelease": ["7", "8"]
     },
     {
       "operatingsystem": "OracleLinux",
-      "operatingsystemrelease": ["7"]
+      "operatingsystemrelease": ["7", "8"]
     },
     {
       "operatingsystem": "RedHat",
-      "operatingsystemrelease": ["8"]
+      "operatingsystemrelease": ["7", "8"]
     },
     {
       "operatingsystem": "Scientific",
@@ -36,7 +36,7 @@
     },
     {
       "operatingsystem": "Ubuntu",
-      "operatingsystemrelease": ["18.04"]
+      "operatingsystemrelease": ["16.04", "18.04"]
     }
   ],
   "requirements": [

@@ -2,9 +2,9 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-## [v2.0.0](https://github.com/tykeal/puppet-external_facts/tree/v2.0.0) (2021-04-26)
+## [2.0.0](https://github.com/tykeal/puppet-external_facts/tree/2.0.0) (2021-04-26)
 
-[Full Changelog](https://github.com/tykeal/puppet-external_facts/compare/1.1.0...v2.0.0)
+[Full Changelog](https://github.com/tykeal/puppet-external_facts/compare/1.1.0...2.0.0)
 
 ### Added
 
@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file. The format 
 
 ### UNCATEGORIZED PRS; LABEL THEM ON GITHUB
 
+-   Chore: Release 2.0.0 [\#11](https://github.com/tykeal/puppet-external_facts/pull/11) ([tykeal](https://github.com/tykeal))
 -   Docs: Update README with changes [\#10](https://github.com/tykeal/puppet-external_facts/pull/10) ([tykeal](https://github.com/tykeal))
 -   Style: Add editoconfig and remove in editor lines [\#8](https://github.com/tykeal/puppet-external_facts/pull/8) ([tykeal](https://github.com/tykeal))
 -   CI: Remove Superlinter from workflows [\#7](https://github.com/tykeal/puppet-external_facts/pull/7) ([tykeal](https://github.com/tykeal))
